@@ -1,10 +1,7 @@
 const key = "api_key=55dcacba7cb6be65367d50a7d9e290c4";
 const imgURL = "https://image.tmdb.org/t/p/w500/";
 const resultsContainer = document.querySelector(".content");
-const trendingURL =
-  "https://api.themoviedb.org/3/movie/upcoming?" +
-  key +
-  "&language=en-US&page=1";
+const trendingURL = "https://api.themoviedb.org/3/movie/top_rated?" + key;
 
 async function fetchTrending() {
   const trendingResult = await fetch(trendingURL);
