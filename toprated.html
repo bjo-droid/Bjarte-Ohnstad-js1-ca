@@ -1,31 +1,38 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="./css/style.css">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./css/style.css" />
     <title>js1-ca</title>
-</head>
-<body>
+  </head>
+  <body>
     <nav>
-        <div class="topnav">
-            <a href="./index.html">Home</a>
-            <a href="#trending">Trending</a>
-            <a href="#">Top Rated Movie</a>
-            <a href="#Contact">Contact</a>
-            <input type="text" placeholder="Search..">
-        </div>
+      <div class="topnav">
+        <a href="./index.html">Home</a>
+        <a href="./trending.html">Trending</a>
+        <a href="#">Top Rated Movie</a>
+        <a href="./contact.html">Contact</a>
+        <form action="/search.html" method="get">
+          <label for="searchValue"></label>
+          <input
+            type="text"
+            id="searchValue"
+            name="query"
+            placeholder="Search.."
+          />
+        </form>
+      </div>
     </nav>
     <div class="container">
-        <div class="title">
-            <h1>All Time Top Rated</h1>
-        </div>
-            <div class="content">
-                <div class="loader">
-                </div>
-            </div>
+      <div class="title">
+        <h1>All Time Top Rated</h1>
+      </div>
+      <div class="content">
+        <div class="loader"></div>
+      </div>
     </div>
     <script src="./js/toprated.js"></script>
-</body>
+  </body>
 </html>
