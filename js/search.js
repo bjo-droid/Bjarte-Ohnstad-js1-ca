@@ -5,7 +5,6 @@ const resultsContainer = document.querySelector(".content");
 
 // remove invalid character from string
 const convertString = searchString.slice(1);
-console.log(convertString);
 
 const searchURL =
   "https://api.themoviedb.org/3/search/movie?api_key=55dcacba7cb6be65367d50a7d9e290c4&language=en-US&" +
@@ -15,13 +14,14 @@ const searchURL =
 async function fetchSearh() {
   const searchResults = await fetch(searchURL);
   const searchJson = await searchResults.json();
-  console.log(searchJson);
   const searchMovie = searchJson.results;
-  console.log(searchMovie);
-  resultsContainer.innerHTML = "";
+  if (searchJson.success === false) {
+    throw new Error("Status code error : False");
+  } else {
+    resultsContainer.innerHTML = "";
 
-  for (let i = 0; i < 20; i++) {
-    resultsContainer.innerHTML += `
+    for (let i = 0; i < 20; i++) {
+      resultsContainer.innerHTML += `
     <a href="details.html?id=${searchMovie[i].id}">
     <div class="movie-card">
     <img src="${imgURL + searchMovie[i].poster_path}">
@@ -30,6 +30,7 @@ async function fetchSearh() {
     </div>
     </div>
     </a>`;
+    }
   }
 }
 

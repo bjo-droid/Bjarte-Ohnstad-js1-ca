@@ -224,3 +224,17 @@ li {
   color: #202124;
   border: none;
 }
+
+#emailError {
+  display: none;
+  color: red;
+}
+
+#nameError {
+  display: none;
+  color: red;
+}
+
+.error {
+  padding-bottom: 50vh;
+}
