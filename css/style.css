@@ -220,29 +220,32 @@ li {
   font-weight: 600;
   font-size: 20px;
   border-radius: 15px;
-  background-color: orange;
   color: #202124;
   border: none;
 }
 
-#emailError {
-  display: none;
-  color: red;
+label {
+  color: orange;
+  font-size: 16px;
+  text-decoration: underline;
 }
 
-#nameError {
-  display: none;
-  color: red;
+button:enabled {
+  background-color: orange;
 }
-#subjectError {
-  display: none;
-  color: red;
-}
-#addressError {
-  display: none;
-  color: red;
+
+button:disabled {
+  background-color: grey;
 }
 
 .error {
   padding-bottom: 50vh;
+}
+
+.message {
+  background: 202124;
+  padding: 1rem;
+  color: orange;
+  border-radius: 1rem;
+  margin-bottom: 1rem;
 }
