@@ -234,6 +234,14 @@ li {
   display: none;
   color: red;
 }
+#subjectError {
+  display: none;
+  color: red;
+}
+#addressError {
+  display: none;
+  color: red;
+}
 
 .error {
   padding-bottom: 50vh;

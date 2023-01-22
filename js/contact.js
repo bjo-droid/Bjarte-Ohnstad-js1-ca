@@ -3,6 +3,10 @@ const formName = document.querySelector("#name");
 const nameError = document.querySelector("#nameError");
 const email = document.querySelector("#email");
 const emailError = document.querySelector("#emailError");
+const formSubject = document.querySelector("#subject");
+const subjectError = document.querySelector("#subjectError");
+const formAddress = document.querySelector("#address");
+const addressError = document.querySelector("#addressError");
 
 function validateForm() {
   event.preventDefault();
@@ -13,10 +17,22 @@ function validateForm() {
     nameError.style.display = "block";
   }
 
+  if (formSubject.value.trim().length > 10) {
+    subjectError.style.display = "none";
+  } else {
+    subjectError.style.display = "block";
+  }
+
   if (validEmail(email.value) === true) {
     emailError.style.display = "none";
   } else {
     emailError.style.display = "block";
+  }
+
+  if (formAddress.value.trim().length > 25) {
+    addressError.style.display = "none";
+  } else {
+    addressError.style.display = "block";
   }
 }
 
